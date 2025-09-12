@@ -1,8 +1,15 @@
+"use client";
 import { useState } from 'react';
 
 const useAuthToken = () => {
+  // const [token, setToken] = useState<string | null>(() => {
+  //   return localStorage.getItem('token');
+  // });
   const [token, setToken] = useState<string | null>(() => {
-    return localStorage.getItem('token');
+    if (typeof window !== "undefined") {
+      return localStorage.getItem("token");
+    }
+    return null;
   });
 
   const saveToken = (newToken: string) => {

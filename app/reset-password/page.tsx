@@ -10,9 +10,18 @@ import { resetPassword } from "@/services/users";
 import { DataStatus } from "@/types";
 import { Eye, EyeOff } from "lucide-react";
 import { useRouter, useSearchParams } from "next/navigation";
-import { useMemo, useState } from "react";
+import { Suspense, useMemo, useState } from "react";
 
 export default function ResetPassword() {
+
+  return (
+    <Suspense fallback={<p>Carregando...</p>}>
+      <ResetPasswordForm/>
+    </Suspense>
+  );
+}
+
+const ResetPasswordForm = () => {
   const [dataStatus, setDataStatus] = useState<DataStatus>("idle");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
@@ -20,6 +29,8 @@ export default function ResetPassword() {
   const [showRepeatPassword, setShowRepeatPassword] = useState(false);
 
   const router = useRouter();
+  
+  // eslint-disable-next-line
   const searchParams = useSearchParams();
 
   const token = searchParams.get("token");
@@ -148,5 +159,5 @@ export default function ResetPassword() {
         )
       }
     </form>
-  );
+  )
 }

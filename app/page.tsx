@@ -25,8 +25,8 @@ import Link from "next/link";
 
 
 export default function Login() {
-  const [email, setEmail] = useState("gabriel.scardozo7@gmail.com");
-  const [password, setPassword] = useState("835a82d7");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [dataStatus, setDataStatus] = useState<DataStatus>("idle");
   const [showPassword, setShowPassword] = useState(false);
 
