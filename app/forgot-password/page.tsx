@@ -51,7 +51,7 @@ export default function ForgotPassword() {
               </CardDescription>
             </CardContent>
             <CardFooter className="flex-col gap-2">
-              <Button variant="link" className="cursor-pointer" onClick={() => router.push("/")} type="button">Voltar para a página inicial</Button>
+              <Button variant="link" className="cursor-pointer" onClick={() => router.push("/login")} type="button">Voltar para a página inicial</Button>
             </CardFooter>
           </Card>
         ) : (
@@ -83,7 +83,7 @@ export default function ForgotPassword() {
                 {dataStatus === "loading" && ( <Loading /> )}
               </Button>
 
-              <Button variant="link" className="cursor-pointer" onClick={() => router.push("/")} type="button">Faça login</Button>
+              <Button variant="link" className="cursor-pointer" onClick={() => router.push("/login")} type="button">Faça login</Button>
             </CardFooter>
           </Card>
 

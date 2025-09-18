@@ -23,7 +23,7 @@ export const UserProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
   const expelUser = () => {
     if (!publicRoutes.includes(pathname)) {
       setUser(null);
-      router.push('/');
+      router.push('/login');
     }
   };
 

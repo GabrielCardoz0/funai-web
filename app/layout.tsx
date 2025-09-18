@@ -10,10 +10,10 @@ import { Toaster } from "sonner";
 import { UserProvider } from "@/contexts/userContext";
 
 export const publicRoutes = [
-  "/forgot-password",
   "/",
+  "/forgot-password",
+  "/login",
   "/reset-password",
-  "/landing-page"
 ]
 
 export default function RootLayout({

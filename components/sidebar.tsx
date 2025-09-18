@@ -58,7 +58,7 @@ export default function SidebarNav() {
   const handleLogout = () => {
     setUser(null);
     removeToken();
-    router.push('/');
+    router.push('/login');
   };
 
   return (

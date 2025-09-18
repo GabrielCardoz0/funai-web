@@ -78,7 +78,7 @@ const ResetPasswordForm = () => {
               </CardDescription>
             </CardContent>
             <CardFooter className="flex-col gap-2">
-              <Button className="cursor-pointer w-full" onClick={() => router.push("/")} type="button">Login</Button>
+              <Button className="cursor-pointer w-full" onClick={() => router.push("/login")} type="button">Login</Button>
             </CardFooter>
           </Card>
         ) : (
